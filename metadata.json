@@ -1,0 +1,5 @@
+{
+  "name": "CondoManager",
+  "description": "A comprehensive dashboard for condominium management featuring real-time statistics, unit tracking, vehicle registration, and observation logs powered by Google Sheets data.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,4 @@
+export const API_URL = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLhHHXDnw2POq8Cr-k2wwxSnaUEj-6EgwGRQvHbF10upNOUCAcxPuzf0e3lKWwA48ujFo0HrWUJts3PF9H6I1Id7IRlSAaMFQ-8plIYojWK2PajCcSTtO9oFrdzQqfFg4Syye3c9aP3URujaQKUxgKXb4NsvkPQ7nVlRDb9cqKmp01Gzxuh9kPf6h4RTh-tTLnVmXsnA7Cd0UG3z7Z5rTlz-HKklFePFousDaHY0cSpe8znK-eN9zgSCl-pQZ1Y8dCtJCViuPDlYYwva0kjnMpPMNHfx4w&lib=Mn_KG_tpbwYaCQ7DXwKB11dH2BVzfUJg8";
+
+export const APP_NAME = "CondoManager";
+export const SUBTITLE = "Portal";
