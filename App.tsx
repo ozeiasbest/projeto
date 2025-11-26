@@ -4,7 +4,7 @@ import Dashboard from './components/Dashboard';
 import SearchPage from './components/Search';
 import { Page, UnitData, FilterType } from './types';
 import { fetchCondoData } from './services/api';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Github } from 'lucide-react';
 
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState<Page>(Page.DASHBOARD);
@@ -68,6 +68,19 @@ const App: React.FC = () => {
         return <Dashboard data={data} loading={loading} onFilterSelect={handleFilterSelect} />;
       case Page.SEARCH:
         return <SearchPage data={data} initialFilterType={currentFilterType} />;
+      case Page.GITHUB:
+        return (
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-2xl font-bold text-slate-800">GitHub</h2>
+              <p className="text-slate-500">Repositório do projeto</p>
+            </div>
+            <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-12 flex flex-col items-center justify-center h-96">
+               <Github className="w-16 h-16 text-slate-200 mb-4" />
+               <p className="text-slate-400 font-medium">Página em branco</p>
+            </div>
+          </div>
+        );
       default:
         return <Dashboard data={data} loading={loading} onFilterSelect={handleFilterSelect} />;
     }

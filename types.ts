@@ -26,7 +26,8 @@ export interface UnitData {
 
 export enum Page {
   DASHBOARD = 'DASHBOARD',
-  SEARCH = 'SEARCH'
+  SEARCH = 'SEARCH',
+  GITHUB = 'GITHUB'
 }
 
 export enum FilterType {

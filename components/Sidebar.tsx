@@ -73,6 +73,19 @@ const Sidebar: React.FC<SidebarProps> = ({ currentPage, setPage, apiConnected, i
           <Search className="w-5 h-5 shrink-0" />
           {isOpen && <span className="font-medium whitespace-nowrap">Buscar Unidades</span>}
         </button>
+
+        <button
+          onClick={() => setPage(Page.GITHUB)}
+          title={!isOpen ? "GitHub" : undefined}
+          className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
+            currentPage === Page.GITHUB
+              ? 'bg-indigo-600 text-white shadow-lg shadow-indigo-900/50'
+              : 'text-slate-400 hover:bg-slate-800 hover:text-white'
+          } ${!isOpen ? 'justify-center px-2' : ''}`}
+        >
+          <Github className="w-5 h-5 shrink-0" />
+          {isOpen && <span className="font-medium whitespace-nowrap">GitHub</span>}
+        </button>
       </nav>
 
       {/* Footer Status */}
@@ -86,20 +99,9 @@ const Sidebar: React.FC<SidebarProps> = ({ currentPage, setPage, apiConnected, i
             {isOpen && <span className="whitespace-nowrap">{apiConnected ? 'API Conectada' : 'Desconectado'}</span>}
         </div>
         
-        <a
-          href="https://github.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          title={!isOpen ? "GitHub" : undefined}
-          className={`mt-4 w-full flex items-center space-x-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors ${!isOpen ? 'justify-center px-2' : ''}`}
-        >
-          <Github className="w-5 h-5 shrink-0" />
-          {isOpen && <span>GitHub</span>}
-        </a>
-
         <button 
           title={!isOpen ? "Sair" : undefined}
-          className={`mt-1 w-full flex items-center space-x-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors ${!isOpen ? 'justify-center px-2' : ''}`}
+          className={`mt-4 w-full flex items-center space-x-3 px-4 py-3 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors ${!isOpen ? 'justify-center px-2' : ''}`}
         >
           <LogOut className="w-5 h-5 shrink-0" />
           {isOpen && <span>Sair</span>}
